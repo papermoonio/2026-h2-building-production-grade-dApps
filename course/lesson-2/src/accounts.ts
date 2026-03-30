@@ -16,6 +16,8 @@ export function getKeypairFromPath(path: string): KeyPair {
 
 export const getAlice = () => getKeypairFromPath("//Alice")
 
+export const getBob = () => getKeypairFromPath("//Bob")
+
 export function getRandomSubstrateKeypair(): KeyPair {
     const seed = randomBytes(32);
     const miniSecret = entropyToMiniSecret(seed)
@@ -85,4 +87,4 @@ async function main() {
     console.log("Alice ss58 address is ", convertPublicKeyToSs58(alice.publicKey));
 }
 
-main()
+// main()

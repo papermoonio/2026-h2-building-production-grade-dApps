@@ -81,4 +81,4 @@ async function getBalance3() {
 //     await getERC20Balance(provider, address);
 // }
 
-getBalance_alithe();
+getBalance_alice();
