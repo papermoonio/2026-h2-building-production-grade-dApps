@@ -1,4 +1,17 @@
-# Homework 6 - Task 1 · Deploy Uniswap V2 Core on Polkadot Hub (Student 2231)
+# Homework 6 · Student 2231
+
+本次作业完成 **Homework 6 的两个实践题**：
+
+| 任务 | 主题 | 目录 | 结果 |
+|---|---|---|---|
+| **Task 1** | 部署 Uniswap V2 Core 到测试网并通过全部测试 | [`./`](./)（根目录） | ✅ 29 个测试全部通过 |
+| **Task 2** | EVM 和 PVM 相互调用的例子 | [`./task2-interop/`](./task2-interop/) | ✅ 15 个测试全部通过 |
+
+学号：**2231**
+
+---
+
+# Task 1 · Deploy Uniswap V2 Core on Polkadot Hub
 
 本次作业完成 **homework-6 实践题第 1 题**：部署 Uniswap V2 Core 到测试网，并跑通所有测试用例。
 
@@ -140,3 +153,18 @@ student-2231/
 ## 学号
 
 **2231**
+
+---
+
+# Task 2 · EVM-PVM 跨 VM 互操作
+
+详细内容见 [`./task2-interop/README.md`](./task2-interop/README.md)。
+
+**核心思路**：用一个票务预订系统演示 EVM ↔ PVM 双向调用
+- `EventRegistry`（EVM 后端）负责活动管理、库存、用户入口
+- `TicketMinter`（PVM 后端）负责实际铸造 ticketId
+- 一次 `bookTicket` 触发 EVM → PVM → EVM 三段式跨 VM 调用
+
+**本地验证**：15 个测试用例全部通过，覆盖核心流程、权限边界、事件时序。
+
+**为什么这个设计比"桥"模式更符合题意**：Polkadot Hub 的 EVM 和 PVM 共享同一个地址空间，互相调用就是普通 Solidity external call，不需要桥。详细对比见 [`task2-interop/README.md`](./task2-interop/README.md) 和 [`task2-interop/docs/design.md`](./task2-interop/docs/design.md)。

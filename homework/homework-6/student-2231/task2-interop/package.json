@@ -1,0 +1,20 @@
+{
+  "name": "student-2231-evm-pvm-interop",
+  "version": "1.0.0",
+  "description": "Homework 6 - Task 2: EVM & PVM Cross-VM Interoperability Example (Ticket Booking System)",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^20.11.19",
+    "hardhat": "^2.22.16",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3"
+  }
+}
