@@ -1,0 +1,17 @@
+{
+  "name": "polkadot-testnet-evm-papi-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "dependencies": {
+    "@polkadot/util": "^13.3.1",
+    "@polkadot/util-crypto": "^13.3.1",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "polkadot-api": "^2.4.2",
+    "viem": "^2.21.14"
+  }
+}

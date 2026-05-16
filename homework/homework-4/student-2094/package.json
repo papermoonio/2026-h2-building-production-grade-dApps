@@ -1,0 +1,20 @@
+{
+  "name": "viem-demo",
+  "version": "1.0.0",
+  "description": "Viem blockchain demo: connection, query, transfer, deploy, contract read/write",
+  "main": "index.mjs",
+  "scripts": {
+    "check": "node --check index.mjs && node --check query.mjs",
+    "query": "node query.mjs",
+    "start": "node index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "solc": "^0.8.34",
+    "viem": "^2.48.4"
+  }
+}

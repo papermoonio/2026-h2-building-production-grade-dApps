@@ -1,0 +1,28 @@
+{
+  "name": "polkadot-testnet-evm-papi-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "cross:call": "node src/evm-pvm-cross-call-example.js",
+    "compile": "hardhat --config hardhat.config.cjs compile",
+    "test": "hardhat --config hardhat.config.cjs test",
+    "deploy:testnet": "hardhat --config hardhat.config.cjs run scripts/deploy-uniswap-v2.cjs --network westendAssetHub"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.2.0",
+    "@polkadot/util": "^13.3.1",
+    "@polkadot/util-crypto": "^13.3.1",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "polkadot-api": "^2.1.1",
+    "viem": "^2.21.14"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.24.3"
+  }
+}
